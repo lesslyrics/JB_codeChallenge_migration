@@ -8,7 +8,6 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
 
-
 public class ApacheHttpClientDelete extends ApacheHttpClient {
     public static void deleteFile(String filename) {
         try {
@@ -33,6 +32,5 @@ public class ApacheHttpClientDelete extends ApacheHttpClient {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-
     }
 }

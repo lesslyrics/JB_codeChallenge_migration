@@ -4,6 +4,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import static com.app.rest.client.ApacheHttpClient.basePath;
+import static org.assertj.core.api.Assertions.*;
 
 public class Main {
 
@@ -23,7 +24,11 @@ public class Main {
                 ApacheHttpClientPost.postFile(str);
                 String filePath = basePath;
                 filePath += str;
-                Files.deleteIfExists(Paths.get(filePath));
+
+                boolean resultDeletedFile = Files.deleteIfExists(Paths.get(filePath));
+                //test for the successful temp file deletion
+                //assertThat(resultDeletedFile).isEqualTo(true);
+
                 System.out.print("...done\n");
                 System.out.println("TOTAL OPERATIONS: " + i);
             }
@@ -44,5 +49,4 @@ public class Main {
         }
         assert filesArrayNew.size() == total;
     }
-
 }
