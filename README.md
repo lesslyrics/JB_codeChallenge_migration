@@ -38,7 +38,7 @@ Test: number of files in old storage is equal to the numer of files in the new s
 
 ## Future improvments:
 
-1. For now there is a redundant step of iterating through old storage several times in order to complete migration of data that was left after the main cycle of migration. It will be removed when all requests will be fixed. By that I mean, that the main issue here is that server is not stable and thus fails quite often, which could possibly lead to the data loss. I added checks for response code 500, and every time it is received the request is send again. The max number of such calls is limited and for now satated as 5. However, even with this check sometimes requests appear to be unsuccessful and I have to loop through old storage several times to transfere all the files. This could be solved by fixing requests response codes checks.  
+1. For now there is a redundant step of iterating through old storage several times in order to complete migration of data that was left after the main cycle of migration. It will be removed when all response codes checks will be fixed. By that I mean, that the main issue here is that server is not stable and thus fails quite often, which could possibly lead to the data loss. I added checks for response code 500, and every time it is received the request is send again. The max number of such calls is limited and for now satated as 3. However, even with this check sometimes requests appear to be unsuccessful and I have to loop through old storage several times to transfere all the files. This could be solved by fixing requests response codes checks.  
 
 2. The following tests need to be implemented:
  - test if DELETE returns {}
