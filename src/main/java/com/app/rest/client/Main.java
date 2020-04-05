@@ -47,6 +47,7 @@ public class Main {
             filesArray = ApacheHttpClientGet.getFilesList("oldStorage");
 
         }
-        assert filesArrayNew.size() == total;
+        //test number of files in old storage is equal to the number of files in the new storage
+        assertThat(filesArrayNew.size()).isEqualTo(total);
     }
 }
