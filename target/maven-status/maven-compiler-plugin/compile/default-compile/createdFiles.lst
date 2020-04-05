@@ -1,0 +1,6 @@
+com/app/rest/client/ApacheHttpClientGet.class
+com/app/rest/client/ApacheHttpClientDelete.class
+com/app/rest/client/ApacheHttpClientGet$1.class
+com/app/rest/client/ApacheHttpClientPost.class
+com/app/rest/client/Main.class
+com/app/rest/client/ApacheHttpClient.class
