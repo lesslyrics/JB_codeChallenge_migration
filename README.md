@@ -36,7 +36,7 @@ However, I faced several problems during this challenge and had to modify pipeli
 
 Tested: 
 
-- number of files in old storage is equal to the numer of files in the new storage
+- number of files in old storage is equal to the number of files in the new storage
 - if temp file is removed
 
 ## Future improvments:
